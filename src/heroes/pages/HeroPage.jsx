@@ -1,4 +1,4 @@
-import { useParams , Navigate } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import { getHeroById } from "../helpers";
 
 export const HeroPage = () => {
@@ -11,8 +11,10 @@ export const HeroPage = () => {
   }
 
   return (
-    <>
-      <h1>{hero.superhero}</h1>
-    </>
+    <div className="row mt-5">
+      <div className="col-4">
+        <img src="" alt="" className="img-thumbnail" />
+      </div>
+    </div>
   );
 };
