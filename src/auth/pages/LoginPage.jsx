@@ -6,8 +6,9 @@ export const LoginPage = () => {
   const { login } = useContext(AuthContext);
   const navigate = useNavigate();
   const onLogin = () => {
-    login('Jaime Rodriguez')
-    navigate("/", {
+    const lastPath = localStorage.getItem("lastPath") || "/";
+    login("Jaime Rodriguez");
+    navigate(lastPath, {
       replace: true,
     });
   };
