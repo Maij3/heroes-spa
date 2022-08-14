@@ -5,19 +5,22 @@ import { PrivateRoute } from "./PrivateRoute";
 import { PublicRoute } from "./PublicRoute";
 
 export const AppRouter = () => {
-  //login/* todas rutas que cominecen con login. 
+  //login/* todas rutas que cominecen con login.
   return (
     <>
       <Routes>
         <Route
-        path="/login"
+          path="login/*"
           element={
-            <PublicRoute>
-              <LoginPage />
-            </PublicRoute>
+            <>
+              <PublicRoute>
+                <Routes>
+                  <Route path="/*" element={<LoginPage />} />
+                </Routes>
+              </PublicRoute>
+            </>
           }
         />
-
         <Route
           path="/*"
           element={
