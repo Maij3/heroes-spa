@@ -31,7 +31,7 @@ export const HeroCard = ({
               <p className="card-text">
                 <small className="text-muted"> {first_appearance}</small>
               </p>
-              <Link to={`/hero/${id}`}>Mas...</Link>
+              <Link aria-label="mas" to={`/hero/${id}`}>Mas...</Link>
             </div>
           </div>
         </div>

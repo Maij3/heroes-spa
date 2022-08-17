@@ -40,7 +40,7 @@ describe("AppRouter.test", () => {
         </AuthContext.Provider>
       </MemoryRouter>
     );
-    screen.debug();
+    //screen.debug();
     expect(screen.getAllByText("Marvel").length).toBeGreaterThanOrEqual(1);
   });
   //End Test
